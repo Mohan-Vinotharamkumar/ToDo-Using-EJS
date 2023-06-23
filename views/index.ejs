@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>ToDo List</title>
+</head>
+<body>
+    <div id="title">
+        <h1> <%= day %> </h1>
+    </div>
+    
+    <div id="form_div">
+        <form action="/" method="post">
+            <input type="text" name="todo_item" id="text_box" placeholder="New List">
+            <input type="submit" name="submit" id="submit" value="+">
+        </form>
+    </div>
+
+    <div id="list_elements">
+        <% for(var i=0;i<total_items.length;i++){ %>
+            <div id="list">
+                <input type="checkbox" name="check" id="">
+                <p><%= total_items[i] %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
